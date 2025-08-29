@@ -1,0 +1,42 @@
+package com.uae.govgpt.data;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.parser.Parser;
+import org.jsoup.parser.ParseError;
+import org.jsoup.parser.ParseErrorList;
+import org.openqa.selenium.WebDriver;
+
+import graphql.Assert;
+
+public class Test {
+	
+	 /**
+     * Checks for broken HTML tags in the current page loaded by the given WebDriver.
+     *
+     * @param driver The Selenium WebDriver instance pointing to the loaded page.
+     */
+    public static void checkBrokenHtmlTags(WebDriver driver) {
+        // Get the rendered page source
+        String pageSource = driver.getPageSource();
+
+        // Set up JSoup parser with error tracking
+        Parser parser = Parser.htmlParser();
+        parser.setTrackErrors(100);
+
+        // Parse the HTML and retrieve errors
+        Document document = Jsoup.parse(pageSource, "", parser);
+        ParseErrorList errorList = parser.getErrors();
+
+        // Report errors
+        if (errorList.isEmpty()) {
+
+        	Assert.assertTrue(true, "no broken tags found");
+        } else {
+        	Assert.assertTrue(false, "broken tags found");
+            }
+    }
+	
+	
+
+}

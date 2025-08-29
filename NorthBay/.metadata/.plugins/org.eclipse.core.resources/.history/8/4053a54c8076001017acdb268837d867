@@ -1,0 +1,52 @@
+package com.uae.govgpt.data;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.parser.Parser;
+import org.jsoup.parser.ParseError;
+import org.jsoup.parser.ParseErrorList;
+import org.openqa.selenium.WebDriver;
+
+public class Test {
+	
+	public void veirfyHtmlNotBroken(WebDriver driver) {
+		String pageSource = driver.getPageSource();
+
+        // Parse using JSoup with error tracking
+        ParseErrorList errorList = ParseErrorList.tracking(10); // increase size for more errors
+        Document doc = Jsoup.parse(pageSource, "", Parser.htmlParser().setTrackErrors(100));
+        errorList = doc.parser().getErrors();
+
+        if (errorList.isEmpty()) {
+            System.out.println("✅ No broken HTML tags detected.");
+        } else {
+            System.out.println("❌ Broken HTML tags found:");
+            for (ParseError error : errorList) {
+                System.out.println(" - " + error.getErrorMessage());
+            }
+        }
+
+	}
+	
+	public static void main(String[] args) {
+		
+		
+		String pageSource = driver.getPageSource();
+
+        // Parse using JSoup with error tracking
+        ParseErrorList errorList = new ParseErrorList(10); // increase size for more errors
+        Document doc = Jsoup.parse(pageSource, "", Parser.htmlParser().setTrackErrors(100));
+        errorList = doc.parser().getErrors();
+
+        if (errorList.isEmpty()) {
+            System.out.println("✅ No broken HTML tags detected.");
+        } else {
+            System.out.println("❌ Broken HTML tags found:");
+            for (ParseError error : errorList) {
+                System.out.println(" - " + error.getErrorMessage());
+            }
+        }
+
+	}
+
+}

@@ -1,0 +1,17 @@
+// @Test(dependsOnMethods={"sign-IN"},groups={"group1","grouops2"})
+// to skip @Test(enabled=false)
+//to wait for specific time for only current test @Test(timeout=4000)
+@BeforeSuite:
+Runs before all tests in the suite.
+Good for setup operations that are needed for the entire suite, like initializing global variables, database connections, or starting a server. 
+Executed only once, regardless of the number of tests in the suite. 
+If @BeforeSuite fails, the entire suite is skipped. 
+@BeforeTest:
+Runs before each test defined within a <test> tag in the TestNG XML file.
+Ideal for preparing data or configurations that are specific to each test group or <test> block. 
+Executed multiple times, once for each <test> tag. 
+If @BeforeTest fails, only the corresponding <test> block is affected. 
+
+Listerners
+public class CustomListeners extends TestListenerAdapter  implements ITestListener,IReporter{
+

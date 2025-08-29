@@ -1,0 +1,18 @@
+[
+	{
+		"email":"farrukh.mohsin@northbaysolutions.net",
+		"password":"test",
+		"name":"Farrukh",
+		"greetMessage":"Hellow How are you",
+		"enlishRequest":"Hello, how are you?",
+		"englishResponse":"Hello, thank you for asking! I am a virtual assistant here to help you with any inquiry or request for information. How can I assist you today?",
+		"arabicRequest":"مرحبًا، كيف حالك؟",
+		"arabicResponse":"مرحبًا، شكرًا لسؤالك. أنا بخير وأتمنى أن تكون بخير أيضًا. كيف يمكنني مساعدتك اليوم؟",
+		"arabicToEnglishValidation":"Hello, thank you for asking,How can I help you today?",
+		"UserRequest":"Abhu Dhabi visit visa details",
+		"sendingCode":"<script>alert('XSS')</script>",
+		"sendingSpecialChars":"<script>alert('XSS')</script>",
+		"sendingSpecialCharacters":"&&&@#@@$3",
+		"govGptResponseValidationText":"I’m sorry. I’m not able to assist with your request. Please ask a different question."
+	}
+]

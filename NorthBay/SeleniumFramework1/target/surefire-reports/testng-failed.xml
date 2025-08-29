@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="com.uae.govgpt.abstractcomponents.CustomListeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)" verbose="0">
+    <classes>
+      <class name="com.uae.govgpt.testcases.TC2VerifyInputIsClearedAutomaticallyFromGovGPT">
+        <methods>
+          <include name="teadDown"/>
+          <include name="verifyGovGptChatboxCleared"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- com.uae.govgpt.testcases.TC2VerifyInputIsClearedAutomaticallyFromGovGPT -->
+      <class name="com.uae.govgpt.testcases.TC1VerifyHomePage">
+        <methods>
+          <include name="teadDown"/>
+          <include name="verifyHomePage"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- com.uae.govgpt.testcases.TC1VerifyHomePage -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

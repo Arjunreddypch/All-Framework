@@ -1,0 +1,178 @@
+package com.uae.govgpt.pageobjects;
+import java.util.HashMap;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
+import com.uae.govgpt.abstractcomponents.AbstractComponents;
+public class HomePage extends AbstractComponents{
+	
+	WebDriver driver;
+	WebElement element;
+	public HomePage(WebDriver driver) {
+		super(driver);
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(xpath="//h1[contains(text(),'Hey')]")
+	WebElement homePage_user;
+	@FindBy(xpath="//p[@data-placeholder='How can I assist you with your work today?']")
+	WebElement govGPT_text_field;
+	@FindBy(xpath="//div[@class='flex w-full user-message group']//p")
+	WebElement response_message_accepted_by_govGPT;
+	@FindBy(xpath="//div[contains(@class,'chat-assistant')]//p")
+	WebElement response_arabic_message_accepted_by_govGPT;
+	@FindBy(xpath="//button[@aria-label='Edit']")
+	WebElement button_edit_after_response_generated;
+	@FindBy(xpath="//button[@aria-label='تعديل']")
+	WebElement button_arabic_edit_after_response_generated;
+	@FindBy(id="send-message-button")
+	WebElement button_send_message;
+	@FindBy(xpath="//img[@alt='User profile']")
+	WebElement img_user_profile;
+	@FindBy(xpath="//button//div[text()='Switch to Arabic']")
+	WebElement option_changeToArabic;
+	@FindBy(xpath="//form//p[@data-placeholder='كيف يمكنني مساعدتك في عملك اليوم؟']")
+	WebElement text_field_arabic;
+	@FindBy(xpath="//div[text()='Make a Plan']/ancestor::button")
+	WebElement button_ui_makeAPlan;
+	@FindBy(xpath="//div[text()='Find Document']/ancestor::button")
+	WebElement button_ui_findADocument;
+	@FindBy(xpath="//div[text()='Summarize Text']/ancestor::button")
+	WebElement button_ui_summarizeText;
+	@FindBy(xpath="//div[text()='Analyze Data']/ancestor::button")
+	WebElement button_ui_analyzeData;
+	@FindBy(xpath="//button[text()='Tools']")
+	WebElement chatbot_ui_option_tools;
+	@FindBy(xpath="//div[text()='Knowledge Repository']")
+	WebElement profile_ui_option_knowledgeRepository;
+	@FindBy(xpath="//span[text()='Search Chats']/preceding::span[text()='search']")
+	WebElement profile_ui_option_Search;
+	@FindBy(id="sidebar-new-chat-button")
+	WebElement profile_ui_button_newChat;
+	@FindBy(xpath="//img[@class='logo-image']")
+	WebElement profile_ui_logon_govGPT;
+	@FindBy(xpath="//form//p")
+	WebElement text_field_govGPT;
+	@FindBy(xpath="(//form//ancestor::div//p)[last()-1]")
+	WebElement response_last_message;
+	@FindBy(xpath="(//form//ancestor::div//p)[last()-2]")
+	WebElement response_last_prev_message;
+	@FindBy(xpath="//button[contains(@class,'bg-white hover:bg-gray-100 text-gray-800 dark:bg-gray-700')]")
+	WebElement button_response_processing;
+	@FindBy(xpath="//button[contains(@class,'text-white bg-gray-200 dark:text-gray-900')]")
+	WebElement button_disabled_send_request;
+	@FindBy(xpath="//button[contains(@class,'bg-black text-white hover:bg-gray-900')]")
+	WebElement button_enabled_send_request;
+	
+	public void verifyHomepageIsDisplayed() {
+		
+		waitforVisibilityOfElementLocated(homePage_user);
+		waitforVisibilityOfElementLocated(profile_ui_logon_govGPT);
+		profile_ui_logon_govGPT.click();
+		waitforVisibilityOfElementLocated(profile_ui_option_knowledgeRepository);
+		Assert.assertTrue(profile_ui_option_knowledgeRepository.isDisplayed(), "option is displayed");
+		Assert.assertTrue(profile_ui_button_newChat.isDisplayed(), "option is displayed");
+		Assert.assertTrue(profile_ui_button_newChat.isDisplayed(), "option is displayed");
+		Assert.assertTrue(profile_ui_option_Search.isDisplayed(), "option is displayed");
+	}
+	
+	public void verifyGovGptChatboxClearedAutomatically(HashMap<String, String> map) {
+			Assert.assertTrue(govGPT_text_field.isDisplayed(), "chat gpt is displayed");
+			govGPT_text_field.sendKeys(map.get("greetMessage"));
+			waitforVisibilityOfElementLocated(button_send_message);
+			button_send_message.click();
+			waitforVisibilityOfElementLocated(button_edit_after_response_generated);
+			Assert.assertEquals(map.get("greetMessage"), response_message_accepted_by_govGPT.getText()," chat is accepted the response");
+			Assert.assertTrue(govGPT_text_field.isDisplayed(), "input is cleared automatically once user enters the text");
+	}
+	public void verifyScrollAndAccessibility(HashMap<String, String> map) throws InterruptedException {
+		Assert.assertTrue(govGPT_text_field.isDisplayed(), "chat gpt is displayed");
+		govGPT_text_field.sendKeys(map.get("UserRequest"));
+		waitforVisibilityOfElementLocated(button_send_message);
+		button_send_message.click();
+		waitforVisibilityOfElementLocated(button_edit_after_response_generated);
+		scrollToMultipleElements(driver);
+}
+	public void verifyHtmlResponseIsNotBroken(HashMap<String, String> map) throws InterruptedException {
+		Assert.assertTrue(govGPT_text_field.isDisplayed(), "chat gpt is displayed");
+		govGPT_text_field.sendKeys(map.get("UserRequest"));
+		waitforVisibilityOfElementLocated(button_send_message);
+		button_send_message.click();
+		waitforVisibilityOfElementLocated(button_edit_after_response_generated);
+		checkBrokenLinksAndImages(driver);
+	}
+	
+	public void verifySameResponseIsGeneratedForArabic(HashMap<String, String> map) throws InterruptedException {
+		
+		waitforVisibilityOfElementLocated(img_user_profile);
+		img_user_profile.click();
+		waitforVisibilityOfElementLocated(option_changeToArabic);
+		option_changeToArabic.click();
+		waitforVisibilityOfElementLocated(text_field_arabic);
+		Assert.assertTrue(text_field_arabic.isDisplayed(), "chat gpt for arabic is displayed");
+		img_user_profile.click();
+		waitforVisibilityOfElementLocated(text_field_arabic);
+		text_field_arabic.sendKeys(map.get("arabicRequest"));
+		waitforVisibilityOfElementLocated(button_send_message);
+		button_send_message.click();
+		waitforVisibilityOfElementLocated(button_arabic_edit_after_response_generated);
+		text_field_govGPT.sendKeys("translate response to English");
+		button_send_message.click();
+		waitforVisibilityOfElementLocated(button_response_processing);
+		waitforInVisibilityOfElement(button_response_processing);
+		System.out.println(response_last_message.getText());
+		System.out.println(compareWordsInStrings(map.get("englishResponse"), response_last_message.getText()));
+		Assert.assertTrue(compareWordsInStrings(map.get("englishResponse"), response_last_message.getText())>0.5);
+}
+	
+	public void verifyGovGPTInputIsSanitized(HashMap<String, String> map) throws InterruptedException {
+		
+		Assert.assertTrue(govGPT_text_field.isDisplayed(), "chat gpt is displayed");
+		govGPT_text_field.sendKeys(map.get("UserRequest"));
+		waitforVisibilityOfElementLocated(button_send_message);
+		button_send_message.click();
+		waitforVisibilityOfElementLocated(button_edit_after_response_generated);
+		govGPT_text_field.sendKeys(map.get("sendingCode"));
+		waitForHardWait(2000);
+		waitforVisibilityOfElementLocated(button_disabled_send_request);
+		
+	}
+	public void verifyGovGPTdoesnotActiOnMaliciousPrompts(HashMap<String, String> map) throws InterruptedException {
+		
+		Assert.assertTrue(govGPT_text_field.isDisplayed(), "chat gpt is displayed");
+		govGPT_text_field.sendKeys(map.get("UserRequest"));
+		waitforVisibilityOfElementLocated(button_send_message);
+		button_send_message.click();
+		waitforVisibilityOfElementLocated(button_edit_after_response_generated);
+		govGPT_text_field.sendKeys(map.get("sendingCode"));
+		waitForHardWait(10000);
+		waitforVisibilityOfElementLocated(button_enabled_send_request);
+		button_send_message.click();
+		waitforVisibilityOfElementLocated(button_disabled_send_request);
+		boolean result=false;
+		if(response_last_message.getText().toLowerCase().contains(map.get("UserRequest").toLowerCase()) || 
+				response_last_message.getText().toLowerCase().
+				contains("I’m sorry. I’m not able to assist with your request. Please ask a different question.".toLowerCase())){
+			result=true;
+		}
+		else if(response_last_message.getText().toLowerCase().contains(map.get("UserRequest").toLowerCase()) || 
+				response_last_prev_message.getText().toLowerCase().
+				contains("I’m sorry. I’m not able to assist with your request. Please ask a different question.".toLowerCase())){
+			result=true;
+		}
+		
+		Assert.assertTrue(result, "govGPT is responding different response");
+		
+	}
+	public void goTo() {
+		
+		driver.get("https://rahulshettyacademy.com/client");
+		
+	}
+
+}

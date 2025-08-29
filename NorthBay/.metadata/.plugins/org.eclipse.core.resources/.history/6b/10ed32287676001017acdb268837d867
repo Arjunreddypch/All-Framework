@@ -1,0 +1,70 @@
+package com.uae.govgpt.data;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+public class Test {
+
+	
+	
+	public double compareWordsInStrings(String text1, String text2) {
+		
+		Set<String> words1 = new HashSet<>(Arrays.asList(text1.toLowerCase().split("\\W+")));
+        Set<String> words2 = new HashSet<>(Arrays.asList(text2.toLowerCase().split("\\W+")));
+
+        Set<String> commonWords = new HashSet<>(words1);
+        commonWords.retainAll(words2); // Intersection
+
+        Set<String> uniqueToStr1 = new HashSet<>(words1);
+        uniqueToStr1.removeAll(words2); // Only in str1
+
+        Set<String> uniqueToStr2 = new HashSet<>(words2);
+        uniqueToStr2.removeAll(words1); // Only in str2
+
+        System.out.println("Common Words: " + commonWords);
+        System.out.println("Unique to str1: " + uniqueToStr1);
+        System.out.println("Unique to str2: " + uniqueToStr2);
+
+        // Optional: Similarity ratio
+        int totalWords = words1.size() + words2.size();
+        int totalCommon = commonWords.size() * 2; // counted once in both
+        double similarity = (double) totalCommon / totalWords;
+
+        System.out.printf("Similarity: %.2f%%\n", similarity * 100);
+		
+		return similarity;
+	}
+	
+	public static void main(String[] args) {
+		String str1="Hello, thank you for asking! I am a virtual assistant here to help you with any inquiry or request for information. How can I assist you today?";
+		String str2="Hello, thank you for asking. I am well and I hope you are well too. How can I assist you today?";
+		
+
+        Set<String> words1 = new HashSet<>(Arrays.asList(str1.toLowerCase().split("\\W+")));
+        Set<String> words2 = new HashSet<>(Arrays.asList(str2.toLowerCase().split("\\W+")));
+
+        Set<String> commonWords = new HashSet<>(words1);
+        commonWords.retainAll(words2); // Intersection
+
+        Set<String> uniqueToStr1 = new HashSet<>(words1);
+        uniqueToStr1.removeAll(words2); // Only in str1
+
+        Set<String> uniqueToStr2 = new HashSet<>(words2);
+        uniqueToStr2.removeAll(words1); // Only in str2
+
+        System.out.println("Common Words: " + commonWords);
+        System.out.println("Unique to str1: " + uniqueToStr1);
+        System.out.println("Unique to str2: " + uniqueToStr2);
+
+        // Optional: Similarity ratio
+        int totalWords = words1.size() + words2.size();
+        int totalCommon = commonWords.size() * 2; // counted once in both
+        double similarity = (double) totalCommon / totalWords;
+
+        System.out.printf("Similarity: %.2f%%\n", similarity * 100);
+    }
+	
+	
+
+}

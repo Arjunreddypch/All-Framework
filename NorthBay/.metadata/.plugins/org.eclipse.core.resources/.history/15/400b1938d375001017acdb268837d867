@@ -1,0 +1,10 @@
+package com.uae.govgpt.data;
+
+public class Test {
+public static void main(String[] args) {
+	
+	
+	String text="Hello, thank you for asking! I am a virtual assistant here to help you with any inquiry or request for information. How can I assist you today?";
+	
+}
+}

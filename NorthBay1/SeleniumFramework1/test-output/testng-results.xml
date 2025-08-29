@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-11T15:46:51 GST" name="Suite" finished-at="2025-08-11T15:53:00 GST" duration-ms="369484">
+    <groups>
+    </groups>
+    <test started-at="2025-08-11T15:46:51 GST" name="Test" finished-at="2025-08-11T15:53:00 GST" duration-ms="369484">
+      <class name="com.uae.govgpt.testcases.TC3VerifyArabicResponse">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.uae.govgpt.testcases.TC3VerifyArabicResponse@48b67364]" started-at="2025-08-11T15:52:21 GST" name="launchApplication" finished-at="2025-08-11T15:52:33 GST" duration-ms="11493" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="verifyArabicResponse(java.util.HashMap)[pri:0, instance:com.uae.govgpt.testcases.TC3VerifyArabicResponse@48b67364]" started-at="2025-08-11T15:52:33 GST" name="verifyArabicResponse" data-provider="getData" finished-at="2025-08-11T15:52:57 GST" duration-ms="24252" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{englishResponse=Hello, thank you for asking! I am a virtual assistant here to help you with any inquiry or request for information. How can I assist you today?, sendingCode=<script>alert('XSS')</script>, greetMessage=Hellow How are you, arabicResponse=مرحبًا، شكرًا لسؤالك. أنا بخير وأتمنى أن تكون بخير أيضًا. كيف يمكنني مساعدتك اليوم؟, arabicRequest=مرحبًا، كيف حالك؟, arabicToEnglishValidation=Hello, thank you for asking,How can I help you today?, password=test, govGptResponseValidationText=I’m sorry. I’m not able to assist with your request. Please ask a different question., enlishRequest=Hello, how are you?, name=Farrukh, sendingSpecialCharacters=&&&@#@@$3, email=farrukh.mohsin@northbaysolutions.net, UserRequest=Abhu Dhabi visit visa details}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyArabicResponse -->
+        <test-method is-config="true" signature="teadDown()[pri:0, instance:com.uae.govgpt.testcases.TC3VerifyArabicResponse@48b67364]" started-at="2025-08-11T15:52:57 GST" name="teadDown" finished-at="2025-08-11T15:53:00 GST" duration-ms="3131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teadDown -->
+      </class> <!-- com.uae.govgpt.testcases.TC3VerifyArabicResponse -->
+      <class name="com.uae.govgpt.testcases.TC7VerifyGovGPTdoesnotActiOnMaliciousPrompts">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.uae.govgpt.testcases.TC7VerifyGovGPTdoesnotActiOnMaliciousPrompts@2663e964]" started-at="2025-08-11T15:51:01 GST" name="launchApplication" finished-at="2025-08-11T15:51:13 GST" duration-ms="11625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="verifyGovGPTdoesnotActiOnMaliciousPrompts(java.util.HashMap)[pri:0, instance:com.uae.govgpt.testcases.TC7VerifyGovGPTdoesnotActiOnMaliciousPrompts@2663e964]" started-at="2025-08-11T15:51:13 GST" name="verifyGovGPTdoesnotActiOnMaliciousPrompts" data-provider="getData" finished-at="2025-08-11T15:52:18 GST" duration-ms="64914" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{englishResponse=Hello, thank you for asking! I am a virtual assistant here to help you with any inquiry or request for information. How can I assist you today?, sendingCode=<script>alert('XSS')</script>, greetMessage=Hellow How are you, arabicResponse=مرحبًا، شكرًا لسؤالك. أنا بخير وأتمنى أن تكون بخير أيضًا. كيف يمكنني مساعدتك اليوم؟, arabicRequest=مرحبًا، كيف حالك؟, arabicToEnglishValidation=Hello, thank you for asking,How can I help you today?, password=test, govGptResponseValidationText=I’m sorry. I’m not able to assist with your request. Please ask a different question., enlishRequest=Hello, how are you?, name=Farrukh, sendingSpecialCharacters=&&&@#@@$3, email=farrukh.mohsin@northbaysolutions.net, UserRequest=Abhu Dhabi visit visa details}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGovGPTdoesnotActiOnMaliciousPrompts -->
+        <test-method is-config="true" signature="teadDown()[pri:0, instance:com.uae.govgpt.testcases.TC7VerifyGovGPTdoesnotActiOnMaliciousPrompts@2663e964]" started-at="2025-08-11T15:52:18 GST" name="teadDown" finished-at="2025-08-11T15:52:21 GST" duration-ms="3145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teadDown -->
+      </class> <!-- com.uae.govgpt.testcases.TC7VerifyGovGPTdoesnotActiOnMaliciousPrompts -->
+      <class name="com.uae.govgpt.testcases.TC6VerifyChatInputIsSanitized">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.uae.govgpt.testcases.TC6VerifyChatInputIsSanitized@6f3187b0]" started-at="2025-08-11T15:50:30 GST" name="launchApplication" finished-at="2025-08-11T15:50:46 GST" duration-ms="15745" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="verifyChatInputIsSanitized(java.util.HashMap)[pri:0, instance:com.uae.govgpt.testcases.TC6VerifyChatInputIsSanitized@6f3187b0]" started-at="2025-08-11T15:50:46 GST" name="verifyChatInputIsSanitized" data-provider="getData" finished-at="2025-08-11T15:50:58 GST" duration-ms="12291" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{englishResponse=Hello, thank you for asking! I am a virtual assistant here to help you with any inquiry or request for information. How can I assist you today?, sendingCode=<script>alert('XSS')</script>, greetMessage=Hellow How are you, arabicResponse=مرحبًا، شكرًا لسؤالك. أنا بخير وأتمنى أن تكون بخير أيضًا. كيف يمكنني مساعدتك اليوم؟, arabicRequest=مرحبًا، كيف حالك؟, arabicToEnglishValidation=Hello, thank you for asking,How can I help you today?, password=test, govGptResponseValidationText=I’m sorry. I’m not able to assist with your request. Please ask a different question., enlishRequest=Hello, how are you?, name=Farrukh, sendingSpecialCharacters=&&&@#@@$3, email=farrukh.mohsin@northbaysolutions.net, UserRequest=Abhu Dhabi visit visa details}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyChatInputIsSanitized -->
+        <test-method is-config="true" signature="teadDown()[pri:0, instance:com.uae.govgpt.testcases.TC6VerifyChatInputIsSanitized@6f3187b0]" started-at="2025-08-11T15:50:58 GST" name="teadDown" finished-at="2025-08-11T15:51:01 GST" duration-ms="3129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teadDown -->
+      </class> <!-- com.uae.govgpt.testcases.TC6VerifyChatInputIsSanitized -->
+      <class name="com.uae.govgpt.testcases.TC1VerifyHomePage">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.uae.govgpt.testcases.TC1VerifyHomePage@205d38da]" started-at="2025-08-11T15:48:29 GST" name="launchApplication" finished-at="2025-08-11T15:48:44 GST" duration-ms="15430" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="verifyHomePage(java.util.HashMap)[pri:0, instance:com.uae.govgpt.testcases.TC1VerifyHomePage@205d38da]" started-at="2025-08-11T15:48:44 GST" name="verifyHomePage" data-provider="getData" finished-at="2025-08-11T15:48:48 GST" duration-ms="4088" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{englishResponse=Hello, thank you for asking! I am a virtual assistant here to help you with any inquiry or request for information. How can I assist you today?, sendingCode=<script>alert('XSS')</script>, greetMessage=Hellow How are you, arabicResponse=مرحبًا، شكرًا لسؤالك. أنا بخير وأتمنى أن تكون بخير أيضًا. كيف يمكنني مساعدتك اليوم؟, arabicRequest=مرحبًا، كيف حالك؟, arabicToEnglishValidation=Hello, thank you for asking,How can I help you today?, password=test, govGptResponseValidationText=I’m sorry. I’m not able to assist with your request. Please ask a different question., enlishRequest=Hello, how are you?, name=Farrukh, sendingSpecialCharacters=&&&@#@@$3, email=farrukh.mohsin@northbaysolutions.net, UserRequest=Abhu Dhabi visit visa details}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePage -->
+        <test-method is-config="true" signature="teadDown()[pri:0, instance:com.uae.govgpt.testcases.TC1VerifyHomePage@205d38da]" started-at="2025-08-11T15:48:48 GST" name="teadDown" finished-at="2025-08-11T15:48:51 GST" duration-ms="3127" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teadDown -->
+      </class> <!-- com.uae.govgpt.testcases.TC1VerifyHomePage -->
+      <class name="com.uae.govgpt.testcases.TC4VerifyScrollGovGPT">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.uae.govgpt.testcases.TC4VerifyScrollGovGPT@389b0789]" started-at="2025-08-11T15:46:51 GST" name="launchApplication" finished-at="2025-08-11T15:47:04 GST" duration-ms="13726" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="verifyScrollAndAccessiblity(java.util.HashMap)[pri:0, instance:com.uae.govgpt.testcases.TC4VerifyScrollGovGPT@389b0789]" started-at="2025-08-11T15:47:04 GST" name="verifyScrollAndAccessiblity" data-provider="getData" finished-at="2025-08-11T15:48:25 GST" duration-ms="80913" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{englishResponse=Hello, thank you for asking! I am a virtual assistant here to help you with any inquiry or request for information. How can I assist you today?, sendingCode=<script>alert('XSS')</script>, greetMessage=Hellow How are you, arabicResponse=مرحبًا، شكرًا لسؤالك. أنا بخير وأتمنى أن تكون بخير أيضًا. كيف يمكنني مساعدتك اليوم؟, arabicRequest=مرحبًا، كيف حالك؟, arabicToEnglishValidation=Hello, thank you for asking,How can I help you today?, password=test, govGptResponseValidationText=I’m sorry. I’m not able to assist with your request. Please ask a different question., enlishRequest=Hello, how are you?, name=Farrukh, sendingSpecialCharacters=&&&@#@@$3, email=farrukh.mohsin@northbaysolutions.net, UserRequest=Abhu Dhabi visit visa details}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyScrollAndAccessiblity -->
+        <test-method is-config="true" signature="teadDown()[pri:0, instance:com.uae.govgpt.testcases.TC4VerifyScrollGovGPT@389b0789]" started-at="2025-08-11T15:48:25 GST" name="teadDown" finished-at="2025-08-11T15:48:29 GST" duration-ms="3165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teadDown -->
+      </class> <!-- com.uae.govgpt.testcases.TC4VerifyScrollGovGPT -->
+      <class name="com.uae.govgpt.testcases.TC5VerifyHtmlResponseIsNotBroken">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.uae.govgpt.testcases.TC5VerifyHtmlResponseIsNotBroken@6dd7b5a3]" started-at="2025-08-11T15:49:14 GST" name="launchApplication" finished-at="2025-08-11T15:49:28 GST" duration-ms="13583" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="verifyHtmlResponseIsNotBroken(java.util.HashMap)[pri:0, instance:com.uae.govgpt.testcases.TC5VerifyHtmlResponseIsNotBroken@6dd7b5a3]" started-at="2025-08-11T15:49:28 GST" name="verifyHtmlResponseIsNotBroken" data-provider="getData" finished-at="2025-08-11T15:50:27 GST" duration-ms="58772" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{englishResponse=Hello, thank you for asking! I am a virtual assistant here to help you with any inquiry or request for information. How can I assist you today?, sendingCode=<script>alert('XSS')</script>, greetMessage=Hellow How are you, arabicResponse=مرحبًا، شكرًا لسؤالك. أنا بخير وأتمنى أن تكون بخير أيضًا. كيف يمكنني مساعدتك اليوم؟, arabicRequest=مرحبًا، كيف حالك؟, arabicToEnglishValidation=Hello, thank you for asking,How can I help you today?, password=test, govGptResponseValidationText=I’m sorry. I’m not able to assist with your request. Please ask a different question., enlishRequest=Hello, how are you?, name=Farrukh, sendingSpecialCharacters=&&&@#@@$3, email=farrukh.mohsin@northbaysolutions.net, UserRequest=Abhu Dhabi visit visa details}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="graphql.AssertException">
+            <message>
+              <![CDATA[3 borken links found]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[graphql.AssertException: 3 borken links found
+at graphql.Assert.throwAssert(Assert.java:207)
+at graphql.Assert.assertTrue(Assert.java:121)
+at com.uae.govgpt.abstractcomponents.BaseTest.checkBrokenLinksAndImages(BaseTest.java:235)
+at com.uae.govgpt.pageobjects.HomePage.verifyHtmlResponseIsNotBroken(HomePage.java:107)
+at com.uae.govgpt.testcases.TC5VerifyHtmlResponseIsNotBroken.verifyHtmlResponseIsNotBroken(TC5VerifyHtmlResponseIsNotBroken.java:26)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- graphql.AssertException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHtmlResponseIsNotBroken -->
+        <test-method is-config="true" signature="teadDown()[pri:0, instance:com.uae.govgpt.testcases.TC5VerifyHtmlResponseIsNotBroken@6dd7b5a3]" started-at="2025-08-11T15:50:27 GST" name="teadDown" finished-at="2025-08-11T15:50:30 GST" duration-ms="3153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teadDown -->
+      </class> <!-- com.uae.govgpt.testcases.TC5VerifyHtmlResponseIsNotBroken -->
+      <class name="com.uae.govgpt.testcases.TC2VerifyInputIsClearedAutomaticallyFromGovGPT">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.uae.govgpt.testcases.TC2VerifyInputIsClearedAutomaticallyFromGovGPT@6950ed69]" started-at="2025-08-11T15:48:51 GST" name="launchApplication" finished-at="2025-08-11T15:49:03 GST" duration-ms="11767" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="verifyGovGptChatboxCleared(java.util.HashMap)[pri:0, instance:com.uae.govgpt.testcases.TC2VerifyInputIsClearedAutomaticallyFromGovGPT@6950ed69]" started-at="2025-08-11T15:49:03 GST" name="verifyGovGptChatboxCleared" data-provider="getData" finished-at="2025-08-11T15:49:11 GST" duration-ms="8172" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{englishResponse=Hello, thank you for asking! I am a virtual assistant here to help you with any inquiry or request for information. How can I assist you today?, sendingCode=<script>alert('XSS')</script>, greetMessage=Hellow How are you, arabicResponse=مرحبًا، شكرًا لسؤالك. أنا بخير وأتمنى أن تكون بخير أيضًا. كيف يمكنني مساعدتك اليوم؟, arabicRequest=مرحبًا، كيف حالك؟, arabicToEnglishValidation=Hello, thank you for asking,How can I help you today?, password=test, govGptResponseValidationText=I’m sorry. I’m not able to assist with your request. Please ask a different question., enlishRequest=Hello, how are you?, name=Farrukh, sendingSpecialCharacters=&&&@#@@$3, email=farrukh.mohsin@northbaysolutions.net, UserRequest=Abhu Dhabi visit visa details}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGovGptChatboxCleared -->
+        <test-method is-config="true" signature="teadDown()[pri:0, instance:com.uae.govgpt.testcases.TC2VerifyInputIsClearedAutomaticallyFromGovGPT@6950ed69]" started-at="2025-08-11T15:49:11 GST" name="teadDown" finished-at="2025-08-11T15:49:14 GST" duration-ms="3129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teadDown -->
+      </class> <!-- com.uae.govgpt.testcases.TC2VerifyInputIsClearedAutomaticallyFromGovGPT -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

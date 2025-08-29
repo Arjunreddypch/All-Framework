@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num attn">2</td><td class="num">0</td><td class="num">0</td><td class="num">607</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.uae.govgpt.testcases.TC1VerifyHomePage</td><td><a href="#m0">launchApplication</a></td><td rowspan="1">1754810212866</td><td rowspan="1">371</td></tr><tr class="failedodd"><td rowspan="1">com.uae.govgpt.testcases.TC2VerifyInputIsClearedAutomaticallyFromGovGPT</td><td><a href="#m1">launchApplication</a></td><td rowspan="1">1754810213263</td><td rowspan="1">17</td></tr><tr><th colspan="4">Test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">com.uae.govgpt.testcases.TC1VerifyHomePage</td><td><a href="#m2">teadDown</a></td><td rowspan="1">1754810213256</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="1">com.uae.govgpt.testcases.TC2VerifyInputIsClearedAutomaticallyFromGovGPT</td><td><a href="#m3">teadDown</a></td><td rowspan="1">1754810213282</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.uae.govgpt.testcases.TC1VerifyHomePage</td><td><a href="#m4">verifyHomePage</a></td><td rowspan="1">1754810213247</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="1">com.uae.govgpt.testcases.TC2VerifyInputIsClearedAutomaticallyFromGovGPT</td><td><a href="#m5">verifyGovGptChatboxCleared</a></td><td rowspan="1">1754810213280</td><td rowspan="1">0</td></tr></tbody>
+</table>
+<h2>Test</h2><h3 id="m0">com.uae.govgpt.testcases.TC1VerifyHomePage#launchApplication</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error Cannot invoke &quot;String.length()&quot; because &quot;s1&quot; is null
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:124)
+	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
+	at com.uae.govgpt.abstractcomponents.BaseTest.initializeDriver(BaseTest.java:67)
+	at com.uae.govgpt.abstractcomponents.BaseTest.launchApplication(BaseTest.java:89)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;String.length()&quot; because &quot;s1&quot; is null
+	at java.base/java.lang.ProcessEnvironment$NameComparator.compare(ProcessEnvironment.java:202)
+	at java.base/java.lang.ProcessEnvironment$NameComparator.compare(ProcessEnvironment.java:195)
+	at java.base/java.util.TreeMap.getEntryUsingComparator(TreeMap.java:374)
+	at java.base/java.util.TreeMap.getEntry(TreeMap.java:344)
+	at java.base/java.util.TreeMap.get(TreeMap.java:279)
+	at java.base/java.lang.ProcessEnvironment.getenv(ProcessEnvironment.java:279)
+	at java.base/java.lang.System.getenv(System.java:1106)
+	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:99)
+	... 43 more
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.uae.govgpt.testcases.TC2VerifyInputIsClearedAutomaticallyFromGovGPT#launchApplication</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error Cannot invoke &quot;String.length()&quot; because &quot;s1&quot; is null
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:124)
+	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
+	at com.uae.govgpt.abstractcomponents.BaseTest.initializeDriver(BaseTest.java:67)
+	at com.uae.govgpt.abstractcomponents.BaseTest.launchApplication(BaseTest.java:89)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;String.length()&quot; because &quot;s1&quot; is null
+	at java.base/java.lang.ProcessEnvironment$NameComparator.compare(ProcessEnvironment.java:202)
+	at java.base/java.lang.ProcessEnvironment$NameComparator.compare(ProcessEnvironment.java:195)
+	at java.base/java.util.TreeMap.getEntryUsingComparator(TreeMap.java:374)
+	at java.base/java.util.TreeMap.getEntry(TreeMap.java:344)
+	at java.base/java.util.TreeMap.get(TreeMap.java:279)
+	at java.base/java.lang.ProcessEnvironment.getenv(ProcessEnvironment.java:279)
+	at java.base/java.lang.System.getenv(System.java:1106)
+	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:99)
+	... 43 more
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.uae.govgpt.testcases.TC1VerifyHomePage#teadDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.uae.govgpt.testcases.TC2VerifyInputIsClearedAutomaticallyFromGovGPT#teadDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.uae.govgpt.testcases.TC1VerifyHomePage#verifyHomePage</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{arabicRequest=مرحبًا، كيف حالك؟, englishResponse=Hello, thank you for asking! I am a virtual assistant here to help you with any inquiry or request for information. How can I assist you today?, password=test, enlishRequest=Hello, how are you?, name=Farrukh, greetMessage=Hellow How are you, arabicResponse=مرحبًا، شكرًا لسؤالك. أنا بخير وأتمنى أن تكون بخير أيضًا. كيف يمكنني مساعدتك اليوم؟, email=farrukh.mohsin@northbaysolutions.net}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error Cannot invoke &quot;String.length()&quot; because &quot;s1&quot; is null
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:124)
+	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
+	at com.uae.govgpt.abstractcomponents.BaseTest.initializeDriver(BaseTest.java:67)
+	at com.uae.govgpt.abstractcomponents.BaseTest.launchApplication(BaseTest.java:89)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;String.length()&quot; because &quot;s1&quot; is null
+	at java.base/java.lang.ProcessEnvironment$NameComparator.compare(ProcessEnvironment.java:202)
+	at java.base/java.lang.ProcessEnvironment$NameComparator.compare(ProcessEnvironment.java:195)
+	at java.base/java.util.TreeMap.getEntryUsingComparator(TreeMap.java:374)
+	at java.base/java.util.TreeMap.getEntry(TreeMap.java:344)
+	at java.base/java.util.TreeMap.get(TreeMap.java:279)
+	at java.base/java.lang.ProcessEnvironment.getenv(ProcessEnvironment.java:279)
+	at java.base/java.lang.System.getenv(System.java:1106)
+	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:99)
+	... 43 more
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.uae.govgpt.testcases.TC2VerifyInputIsClearedAutomaticallyFromGovGPT#verifyGovGptChatboxCleared</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{arabicRequest=مرحبًا، كيف حالك؟, englishResponse=Hello, thank you for asking! I am a virtual assistant here to help you with any inquiry or request for information. How can I assist you today?, password=test, enlishRequest=Hello, how are you?, name=Farrukh, greetMessage=Hellow How are you, arabicResponse=مرحبًا، شكرًا لسؤالك. أنا بخير وأتمنى أن تكون بخير أيضًا. كيف يمكنني مساعدتك اليوم؟, email=farrukh.mohsin@northbaysolutions.net}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error Cannot invoke &quot;String.length()&quot; because &quot;s1&quot; is null
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:124)
+	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
+	at com.uae.govgpt.abstractcomponents.BaseTest.initializeDriver(BaseTest.java:67)
+	at com.uae.govgpt.abstractcomponents.BaseTest.launchApplication(BaseTest.java:89)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;String.length()&quot; because &quot;s1&quot; is null
+	at java.base/java.lang.ProcessEnvironment$NameComparator.compare(ProcessEnvironment.java:202)
+	at java.base/java.lang.ProcessEnvironment$NameComparator.compare(ProcessEnvironment.java:195)
+	at java.base/java.util.TreeMap.getEntryUsingComparator(TreeMap.java:374)
+	at java.base/java.util.TreeMap.getEntry(TreeMap.java:344)
+	at java.base/java.util.TreeMap.get(TreeMap.java:279)
+	at java.base/java.lang.ProcessEnvironment.getenv(ProcessEnvironment.java:279)
+	at java.base/java.lang.System.getenv(System.java:1106)
+	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:99)
+	... 43 more
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

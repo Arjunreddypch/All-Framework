@@ -1,0 +1,28 @@
+package com.uae.govgpt.testcases;
+
+import java.io.IOException;
+import java.util.HashMap;
+
+import org.testng.annotations.Test;
+
+import com.uae.govgpt.abstractcomponents.BaseTest;
+import com.uae.govgpt.pageobjects.HomePage;
+
+public class TC2VerifyInputIsClearedAutomaticallyFromGovGPT extends BaseTest {
+	
+	
+	@Test(dataProvider = "getData")
+	/** 
+     * verifyGovGptChatboxCleared() method verifies request text is entered in to govGPT bot and cleared automatically once user clicks on enter button or send button
+     * @author [Nagarjuna]
+     * @params HashMap<String, String> map reads data from testdata.json file
+     */
+	public void verifyGovGptChatboxCleared(HashMap<String, String> map) throws IOException, InterruptedException {
+		
+		
+		login.goTo();
+		HomePage homepage = login.loginToApplication(map);
+		homepage.verifyHomepageIsDisplayed();
+		homepage.verifyGovGptChatboxClearedAutomatically(map);
+	}
+}

@@ -1,0 +1,29 @@
+package com.uae.govgpt.testcases;
+
+import java.io.IOException;
+import java.util.HashMap;
+
+import org.testng.annotations.Test;
+
+import com.uae.govgpt.abstractcomponents.BaseTest;
+import com.uae.govgpt.pageobjects.HomePage;
+
+public class TC4VerifyScrollGovGPT2 extends BaseTest {
+	
+	HomePage homepage;
+	@Test(dataProvider = "getData")
+	/** 
+     * verifyScrollAndAccessiblity() method verifies scrolling functionality of govGPT bot
+     * @author [Nagarjuna]
+     * @params HashMap<String, String> map reads data from testdata.json file
+     */
+	public void verifyScrollAndAccessiblity(HashMap<String, String> map) throws IOException, InterruptedException {
+		
+		
+		login.goTo();
+		HomePage homepage = login.loginToApplication(map);
+		homepage.verifyHomepageIsDisplayed();
+		homepage.verifyScrollAndAccessibility(map);
+	}
+	
+}

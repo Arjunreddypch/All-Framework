@@ -1,0 +1,21 @@
+package com.uae.govgpt.pageobjects;
+
+import java.io.IOException;
+import java.util.HashMap;
+
+import org.testng.annotations.Test;
+
+import com.uae.govgpt.abstractcomponents.BaseTest;
+import com.uae.govgpt.abstractcomponents.Retry;
+
+public class StandAloneTestSample2 extends BaseTest {
+	
+	
+	@Test(dataProvider = "getData")
+	public void addItemToCart(HashMap<String, String> map) throws IOException, InterruptedException {
+		
+		
+		login.goTo();
+		HomePage productcatalogpage = login.loginToApplication(map.get("email"),map.get("password"));
+	}
+}

@@ -1,0 +1,53 @@
+package com.uae.govgpt.pageobjects;
+
+import java.util.HashMap;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.uae.govgpt.abstractcomponents.AbstractComponents;
+
+public class LoginPage extends AbstractComponents{
+	
+	public WebDriver driver;
+
+	public LoginPage(WebDriver driver) {
+		super(driver);
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+	@FindBy(css="input[type='email']")
+	WebElement login_email;
+	@FindBy(css="input[type='password']")
+	WebElement login_password;
+	@FindBy(css="button[type='submit']")
+	WebElement login_button;
+	@FindBy(xpath="//button[text()='Login using Credentials']")
+	WebElement login_using_credentials_button;
+	By login_using_credentials_button1 = By.xpath("//button[text()='Login using Credentials']");
+	
+	public HomePage loginToApplication(HashMap<String, String> map) {
+		login_using_credentials_button.click();
+		waitforVisibilityOfElementLocated(login_email);
+		login_email.sendKeys(map.get("email"));
+		login_password.sendKeys(map.get("password"));
+		login_button.click();
+		return new HomePage(driver);
+	}
+	public HomePage loginToApplication(String email, String password) {
+		login_email.sendKeys(email);
+		login_password.sendKeys(password);
+		login_button.click();
+		return new HomePage(driver);
+	}
+	
+	public void goTo() {
+		
+		driver.get("https://govgpt.sandbox.dge.gov.ae/");
+		waitforVisibilityOfElementLocated(login_using_credentials_button);
+	}
+
+}

@@ -1,0 +1,15 @@
+//identify elements using css selector 
+by using id     "#idattributevalue"
+by using class ".classattribute value"
+// using any attribute driver.findElement(By.cssSelector(“<tagname>[href=’<href value>’]”));
+//Combining Attributes driver.findElement(By.cssSelector(“<tagname>#<id value>[href=’<href value>’]”));
+//Class and attribute Example: driver.findElement(By.cssSelector(“<tagname>.<class value>[href=’<href value>’]”));
+// substring driver.findElement(By.cssSelector(“<tagname>[<attribute>^=’prefix of the string’]”)); "a[class^='Navbar_logo_']"
+//Matching a suffix (Ends with: $):driver.findElement(By.cssSelector(“<tagname>[<attribute>$=’suffix of the string’]”));"a[class$='26S5Y']"
+//contains driver.findElement(By.cssSelector(“<tagname>[<attribute>*=’substring’]”));"a[class*='logo_']"
+TagName with “:first-of-type”
+TagName with “:last-of-type”
+TagName with “:nth-of-type(n)”
+TagName with “:nth-child(n)”
+TagName with “:first-child”
+TagName with “:last-child”

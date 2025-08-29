@@ -1,0 +1,27 @@
+package com.uae.govgpt.testcases;
+
+import java.io.IOException;
+import java.util.HashMap;
+
+import org.testng.annotations.Test;
+
+import com.uae.govgpt.abstractcomponents.BaseTest;
+import com.uae.govgpt.pageobjects.HomePage;
+
+public class TC1VerifyHomePage extends BaseTest {
+	
+	
+	@Test(dataProvider = "getData")
+	/** 
+     * verifyHomePage() verifies login to application and verify home page is displayed successfully govgpt elements are loaded correctly
+     * @author [Nagarjuna]
+     * @params HashMap<String, String> map reads data from testdata.json file
+     */
+	public void verifyHomePage(HashMap<String, String> map) throws IOException, InterruptedException {
+		
+		
+		login.goTo();
+		HomePage homepage = login.loginToApplication(map);
+		homepage.verifyHomepageIsDisplayed();
+	}
+}

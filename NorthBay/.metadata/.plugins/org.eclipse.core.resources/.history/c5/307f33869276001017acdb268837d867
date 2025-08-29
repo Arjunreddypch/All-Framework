@@ -1,0 +1,5 @@
+package com.uae.govgpt.testcases;
+
+public class TC6VerifyChatInputIsSanitized {
+
+}

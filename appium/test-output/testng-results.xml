@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-23T15:07:28 GST" name="Default suite" finished-at="2025-08-23T15:08:30 GST" duration-ms="62374">
+    <groups>
+    </groups>
+    <test started-at="2025-08-23T15:07:28 GST" name="Default test" finished-at="2025-08-23T15:08:30 GST" duration-ms="62374">
+      <class name="arjun.ecommerce.SearchItemAddItemToCartCheckout">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:arjun.ecommerce.SearchItemAddItemToCartCheckout@6a6cb05c]" started-at="2025-08-23T15:07:28 GST" name="configureAppium" finished-at="2025-08-23T15:07:35 GST" duration-ms="7081" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method signature="AppiumTest()[pri:0, instance:arjun.ecommerce.SearchItemAddItemToCartCheckout@6a6cb05c]" started-at="2025-08-23T15:07:35 GST" name="AppiumTest" finished-at="2025-08-23T15:08:29 GST" duration-ms="54475" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AppiumTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:arjun.ecommerce.SearchItemAddItemToCartCheckout@6a6cb05c]" started-at="2025-08-23T15:08:29 GST" name="tearDown" finished-at="2025-08-23T15:08:30 GST" duration-ms="785" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- arjun.ecommerce.SearchItemAddItemToCartCheckout -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="OfficeDepot">
+	<test name="HomePage">
+		<classes>
+			<class name="testng.programs.dealsPage.TutorialDay1"></class>
+			<class name="testng.programs.dealsPage.TutorialDay2"></class>
+		</classes>
+	</test>
+	<test name="LoginPage">	
+		<classes>
+			<class name="testng.programs.dealsPage.TutorialDay1">
+				<methods>
+					<include name="login"></include>
+					<exclude name="logout"></exclude>
+				</methods>
+			</class>
+			<class name="testng.programs.dealsPage.TutorialDay2">
+				<methods>
+					<exclude name="deals"></exclude>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

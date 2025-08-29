@@ -1,0 +1,43 @@
+===================================================================
+         SELENIUM AUTOMATION FRAMEWORK - SETUP & CONFIGURATION
+===================================================================
+
+📌 PROJECT OVERVIEW
+--------------------
+This project is a Selenium-based UI test automation framework built using:
+- Java
+- Selenium WebDriver 4.33.0
+- Maven (Build Tool)
+- TestNG (Test Framework)
+- Chrome Browser
+- WebDriverManager (Driver Management)
+- ExtentReports (Reporting Tool)
+- [Logging Tool: Pending Integration]
+
+...
+
+▶ HOW TO RUN TESTS
+-------------------
+
+
+Using IDE:
+- Right-click on the test class or testng.xml file → Run
+
+Using terminal:
+$ mvn clean test
+
+...
+
+📊 VIEW TEST REPORTS
+---------------------
+- After execution, open: `reports`>>index.htm under 
+
+- View results and logs in a browser.
+
+...
+
+🧪 NOTES
+---------
+- Logging (e.g., using Log4j or SLF4J) is planned but not implemented yet.
+- Consider integrating with CI/CD tools like Jenkins for continuous testing.
+- Future improvements: Docker support, parallel execution, grid configuration.

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="OfficeDepot">
+	<test name="LoginPage">
+		<classes>
+			<class name="testng.programs.dealsPage.TutorialDay3">
+				<methods>
+					<include name="deals.*"></include>
+					<exclude name="homePage"></exclude>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

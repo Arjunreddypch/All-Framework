@@ -1,0 +1,29 @@
+package com.uae.govgpt.testcases;
+
+import java.io.IOException;
+import java.util.HashMap;
+
+import org.testng.annotations.Test;
+
+import com.uae.govgpt.abstractcomponents.BaseTest;
+import com.uae.govgpt.pageobjects.HomePage;
+
+public class TC3VerifyArabicResponse extends BaseTest {
+	
+	HomePage homepage;
+	@Test(dataProvider = "getData")
+	/** 
+     * verifyArabicResponse() method verifies Arabic request text is entered in to govGPT 
+     * & verifies Arabic response and converts in to English and verifies Arabic and English responses are similar
+     * @author [Nagarjuna]
+     * @params HashMap<String, String> map reads data from testdata.json file
+     */
+	public void verifyArabicResponse(HashMap<String, String> map) throws IOException, InterruptedException {
+		
+		
+		login.goTo();
+		homepage = login.loginToApplication(map);
+		homepage.verifyHomepageIsDisplayed();
+		homepage.verifySameResponseIsGeneratedForArabic(map);
+	}
+}

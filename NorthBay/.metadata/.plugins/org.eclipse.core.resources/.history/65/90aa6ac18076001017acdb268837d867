@@ -1,0 +1,61 @@
+package com.uae.govgpt.data;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.parser.Parser;
+import org.jsoup.parser.ParseError;
+import org.jsoup.parser.ParseErrorList;
+import org.openqa.selenium.WebDriver;
+
+import graphql.Assert;
+
+public class Test {
+	
+	 /**
+     * Checks for broken HTML tags in the current page loaded by the given WebDriver.
+     *
+     * @param driver The Selenium WebDriver instance pointing to the loaded page.
+     */
+    public static void checkBrokenHtmlTags(WebDriver driver) {
+        // Get the rendered page source
+        String pageSource = driver.getPageSource();
+
+        // Set up JSoup parser with error tracking
+        Parser parser = Parser.htmlParser();
+        parser.setTrackErrors(100);
+
+        // Parse the HTML and retrieve errors
+        Document document = Jsoup.parse(pageSource, "", parser);
+        ParseErrorList errorList = parser.getErrors();
+
+        // Report errors
+        if (errorList.isEmpty()) {
+
+        	Assert.assertTrue(true, "no broken tags found");
+        } else {
+        	Assert.assertTrue(false, "broken tags found");
+            }
+    }
+	
+	public static void main(String[] args) {
+		
+		
+		String pageSource = driver.getPageSource();
+
+        // Parse using JSoup with error tracking
+        ParseErrorList errorList = new ParseErrorList(10); // increase size for more errors
+        Document doc = Jsoup.parse(pageSource, "", Parser.htmlParser().setTrackErrors(100));
+        errorList = doc.parser().getErrors();
+
+        if (errorList.isEmpty()) {
+            System.out.println("✅ No broken HTML tags detected.");
+        } else {
+            System.out.println("❌ Broken HTML tags found:");
+            for (ParseError error : errorList) {
+                System.out.println(" - " + error.getErrorMessage());
+            }
+        }
+
+	}
+
+}

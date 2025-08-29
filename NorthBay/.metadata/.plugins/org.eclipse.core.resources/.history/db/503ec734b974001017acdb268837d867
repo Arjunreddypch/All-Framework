@@ -1,0 +1,21 @@
+package com.uae.govgpt.pageobjects;
+
+import java.io.IOException;
+import java.util.HashMap;
+
+import org.testng.annotations.Test;
+
+import com.uae.govgpt.abstractcomponents.BaseTest;
+
+public class StandAloneTestSample extends BaseTest {
+	
+	
+	@Test(dataProvider = "getData")
+	public void verifyHomePage(HashMap<String, String> map) throws IOException, InterruptedException {
+		
+		
+		login.goTo();
+		HomePage homepage = login.loginToApplication(map);
+		homepage.verifyHomepageIsDisplayed();
+	}
+}

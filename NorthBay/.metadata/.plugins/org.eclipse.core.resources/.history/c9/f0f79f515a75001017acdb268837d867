@@ -1,0 +1,12 @@
+[
+	{
+		"email":"farrukh.mohsin@northbaysolutions.net",
+		"password":"test",
+		"name":"Farrukh",
+		"greetMessage":"Hellow How are you",
+		"enlishRequest":"Hello, how are you?",
+		"englishResponse":"Hello, thank you for asking! I am a virtual assistant here to help you with any inquiry or request for information. How can I assist you today?",
+		"arabicRequest":"مرحبًا، كيف حالك؟",
+		"arabicResponse":"مرحبًا، شكرًا لسؤالك! أنا مساعد افتراضي هنا لمساعدتك في أي استفسار أو طلب معلومات. كيف يمكنني مساعدتك اليوم؟"
+	}
+]
